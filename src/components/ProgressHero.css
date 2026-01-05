@@ -1,0 +1,116 @@
+.progress-hero {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.progress-hero-content {
+  max-width: 600px;
+}
+
+.progress-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-stats {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-current {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.progress-of {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.progress-bar-container {
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-bar {
+  position: relative;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.progress-bar-glow {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  height: 20px;
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.6) 50%, rgba(147, 197, 253, 0.8) 100%);
+  border-radius: var(--radius-full);
+  filter: blur(8px);
+  transition: width 0.5s ease-out;
+  pointer-events: none;
+}
+
+.progress-needed {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.reassurance-card {
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.reassurance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.reassurance-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.reassurance-item svg {
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .progress-hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .progress-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .progress-current {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .reassurance-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
